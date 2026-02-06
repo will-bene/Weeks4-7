@@ -22,6 +22,19 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for (int i = spawnedObjectList.Count - 1; i >= 0; i--)
+        {
+            GameObject curObj = spawnedObjectList[i];
+            if (curObj != null)
+            {
+               if (curObj.active!=true)
+                {
+                    spawnedObjectList.Remove(curObj);
+                }
+                
+            }
+        }
+
         if (spawnedObjectList.Count<=0)
         {//no more enemies
             winText.text = "You Won!!!";
@@ -30,15 +43,11 @@ public class EnemySpawner : MonoBehaviour
 
     public void spawnEnemy()
     {
-        Vector2 spawnPos = Random.insideUnitSphere * 3;
+        Vector2 spawnPos = Random.insideUnitSphere * 4;
         GameObject curSpawned = Instantiate(spawnObject, spawnPos, Quaternion.identity);
-        EnemiesClicker curSpawnedScript = curSpawned.GetComponent<EnemiesClicker>();
-        curSpawnedScript.spawnerObject = gameObject;
+        //EnemiesClicker curSpawnedScript = curSpawned.GetComponent<EnemiesClicker>();
+        //curSpawnedScript.spawnerObject = gameObject;
         spawnedObjectList.Add(curSpawned);
     }
 
-    public void killEnemy()
-    {//called for in enemy object when dying
-
-    }
 }

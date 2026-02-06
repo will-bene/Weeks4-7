@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class EnemiesClicker : MonoBehaviour
 {
-    public float HP;
+    public float HP=6;
     public TextMeshProUGUI hpLabel;
     public GameObject spawnerObject; //set as spawner object
     private SpriteRenderer sr;
@@ -26,7 +26,7 @@ public class EnemiesClicker : MonoBehaviour
         {
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {//mouse clicked over object
-                if (HP > 1)
+                if (HP > 0)
                 {//still has hp to lose
                     HP--;
                     hpLabel.text = HP.ToString();

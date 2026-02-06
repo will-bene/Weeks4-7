@@ -1,12 +1,15 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MouseOverText : MonoBehaviour
 {
     public string myName;
     public TextMeshProUGUI textToChange;
     private SpriteRenderer sr;
+    public Button colorButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +24,8 @@ public class MouseOverText : MonoBehaviour
         if (mousedOver)
         {
             textToChange.text = myName;
-            //textToChange.
+            //colorButton.onClick.RemoveAllListeners();
+            //colorButton.onClick.AddListener(
         }
     }
 

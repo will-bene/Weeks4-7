@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
             GameObject curObj = spawnedObjectList[i];
             if (curObj != null)
             {
-               if (curObj.active!=true)
+               if (curObj.activeSelf!=true)
                 {
                     spawnedObjectList.Remove(curObj);
                 }

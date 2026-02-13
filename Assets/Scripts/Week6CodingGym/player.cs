@@ -4,10 +4,11 @@ using UnityEngine.InputSystem;
 public class player : MonoBehaviour
 {
     public float playerSpeed = 3;
+    private Vector3 spawnPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        spawnPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -31,5 +32,10 @@ public class player : MonoBehaviour
             oldPosition.y -= playerSpeed * Time.deltaTime;
         }
         transform.position = oldPosition;
+    }
+
+    public void getHit()
+    {
+        transform.position = spawnPosition;
     }
 }

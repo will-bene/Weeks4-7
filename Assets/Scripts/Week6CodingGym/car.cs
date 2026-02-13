@@ -7,7 +7,7 @@ public class car : MonoBehaviour
     void Start()
     {
         Vector3 oldTransform = transform.position;
-        oldTransform.y=Random.Range(-3, 3);
+        oldTransform.y = Random.Range(-3, 3);
         transform.position = oldTransform;
     }
 

@@ -6,6 +6,7 @@ public class TankRotation : MonoBehaviour
     public Camera gameCamera;
     public GameObject objToSpawn;
     public float destroyTime = 5;
+    public AudioSource fireSFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,7 @@ public class TankRotation : MonoBehaviour
         bool mouseClicked = Mouse.current.leftButton.wasPressedThisFrame;
         if (mouseClicked)
         {
+            fireSFX.Play();
             GameObject spawnedObj = Instantiate(objToSpawn, transform.position, transform.rotation);
             Destroy(spawnedObj, destroyTime);
         }

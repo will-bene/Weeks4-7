@@ -1117,7 +1117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -5.5349, y: 1.33}
+  m_AnchoredPosition: {x: -6.04, y: 1.39}
   m_SizeDelta: {x: 187.7031, y: 136.4064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5664000676300342925
@@ -1330,6 +1330,7 @@ GameObject:
   - component: {fileID: 8273050348092265971}
   - component: {fileID: 476194700102275981}
   - component: {fileID: 827985477827190134}
+  - component: {fileID: 6912868383751627221}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -1346,7 +1347,7 @@ Transform:
   m_GameObject: {fileID: 7903175248403493892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.94, y: 0.91, z: 0}
+  m_LocalPosition: {x: 7.55, y: 1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1397,12 +1398,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7047888579345826262, guid: a1832a106d60ea645bc12e963d36affa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.31, y: 6.0058594}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1458,3 +1459,25 @@ MonoBehaviour:
     m_RotationOrder: 4
   curveProgress: 0
   curveDuration: 1
+--- !u!95 &6912868383751627221
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903175248403493892}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3b963a74984ba34f81ff6e9b4b5368b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

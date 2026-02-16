@@ -26,7 +26,7 @@ public class Item : MonoBehaviour
 
         //create new color to change to based off of hue
         Color newColor = new Color();
-        newColor = Color.HSVToRGB(col, 1f, 1f);
+        newColor = Color.HSVToRGB(col, 0.6f, 1f);
 
         //set sprite to be that color
         spriteRenderer.color = newColor;

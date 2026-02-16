@@ -18,7 +18,6 @@ public class Controller : MonoBehaviour
     //currently spawned customer
     private GameObject currentCustomer;
 
-
     //margin of error from slider to actual value (as a fraction of max slider value, ex 0.1 > 10 percent)
     public float valueMargin = 0.05f; //allowed to be within 5% of target
 
@@ -140,7 +139,7 @@ public class Controller : MonoBehaviour
             //Adjust item animation color
             SpriteRenderer sr = sellPrefab.GetComponent<SpriteRenderer>();
             Color newColor = new Color();
-            newColor = Color.HSVToRGB(itemColor, 1f, 1f);
+            newColor = Color.HSVToRGB(itemColor, 0.6f, 1f);
             sr.color = newColor;
 
             //destroy item animation after 0.2 seconds

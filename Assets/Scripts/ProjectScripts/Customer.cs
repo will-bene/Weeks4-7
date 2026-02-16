@@ -53,7 +53,7 @@ public class Customer : MonoBehaviour
         //Scale
         customerScale = Random.Range(0.5f, 3f); scaleLabel.text = customerScale.ToString("F2")+"x";
         //Color
-        customerColor = Random.Range(0f, 0.9f); colorLabel.text = customerColor.ToString("F2");
+        customerColor = Random.Range(0f, 0.9f); colorLabel.text = Mathf.Round(customerColor*255).ToString();
         //Choose random dialogue from a list
         randomDialogue.Add("I want..."); randomDialogue.Add("Do you have..."); randomDialogue.Add("I'd like this!"); randomDialogue.Add("Can you get this?"); randomDialogue.Add("Have any of these?");
         dialogueLabel.text = randomDialogue[Random.Range(0, randomDialogue.Count-1)].ToString();
@@ -73,7 +73,7 @@ public class Customer : MonoBehaviour
 
         //Change item sprite's color
         Color newColor = new Color();
-        newColor = Color.HSVToRGB(customerColor, 1f, 1f);
+        newColor = Color.HSVToRGB(customerColor, 0.6f, 1f);
         orderItem.color = newColor;
         //change color UI sprite color
         colorUI.color = newColor;

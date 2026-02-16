@@ -1601,6 +1601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerPrefab: {fileID: 7903175248403493892, guid: 48db626b2a03a324783c351dac3c0ff1, type: 3}
+  onSellPrefab: {fileID: 661253743900153978, guid: 66de1293eb81dac4a8e6333bc38da826, type: 3}
   rotationSlider: {fileID: 1512816060}
   scaleSlider: {fileID: 1587086231}
   colorSlider: {fileID: 83224991}

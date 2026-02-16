@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI.Table;
 
 public class Item : MonoBehaviour
 {
+
+    public Image colorUI; //Color slider UI icon
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +30,9 @@ public class Item : MonoBehaviour
 
         //set sprite to be that color
         spriteRenderer.color = newColor;
+
+        //set slider color icon to be that color
+        colorUI.color = newColor;
     }
 
     public void changeScale(float scl)

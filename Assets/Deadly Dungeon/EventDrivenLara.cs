@@ -15,6 +15,11 @@ public class EventDrivenLara : MonoBehaviour
     public float health = 10; //current HP. If it's 0 she's dead
     public bool isDead = false;
 
+    //poison
+    public bool poisoned = false;
+    public float poisonTimer = 2;
+    public float poisonTimerMax = 2;
+
     public float swimmingTimer = 0;
     public float swimmingTimerMaxValue = 3;
 
@@ -50,7 +55,11 @@ public class EventDrivenLara : MonoBehaviour
 
         SetAnimation();
 
+        poisonControl();
+
         transform.position += (Vector3)movement;
+
+
     }
 
     public void SetSwimming(bool value)
@@ -162,5 +171,29 @@ public class EventDrivenLara : MonoBehaviour
         //if we were dead and got healed,
         //restart the swim timer
         if (isSwimming) StartSwimTimer.Invoke();
+    }
+
+    public void SetPoison(bool isPoisoned)
+    {
+        poisoned = isPoisoned;
+    }
+
+    void poisonControl()
+    {
+        if (poisoned)
+        {
+            poisonTimer -= Time.deltaTime;
+            if (poisonTimer < 0)
+            {
+                TakeDamage(1);
+                poisonTimer = poisonTimerMax;
+            }
+        }
+    }
+
+    public void FallInPit()
+    {
+        TakeDamage(1);
+        transform.position = Vector3.zero;
     }
 }
